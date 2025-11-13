@@ -39,7 +39,7 @@ fclean: clean
 re: fclean all
 
 add:
-	git add src include .gitignore README.md Makefile
+	git add src include .gitignore README.md Makefile main.cpp
 	git status
 	git commit -m "$(MSG)"
 
