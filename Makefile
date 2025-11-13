@@ -1,21 +1,22 @@
 NAME = BenGame
 MSG = You didn't add msg so do it again 
-SRC = ./main.cpp            	      \
-      ./src/Game.cpp                \
-      ./src/Player.cpp                \
-      ./src/Plate.cpp                \
-      ./src/Pawn.cpp                \
-      ./src/Case.cpp                \
-      ./src/Dice.cpp                
+SRC = ./main.cpp            	      	\
+	  ./src/checkStart.cpp				\
+#       ./src/Game.cpp             	   	\
+#       ./src/Player.cpp                	\
+#       ./src/Plate.cpp                	\
+#       ./src/Pawn.cpp                	\
+#       ./src/ACase.cpp                	\
+#       ./src/Dice.cpp                
 
 
 OBJ_DIR = obj
 OBJS = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 CC = c++
-CFLAGS   = -Wall -Wextra -Werror -std=c++98 -g3 -fno-omit-frame-pointer \
+CFLAGS   = -Wall -Wextra -Werror -std=c++98 \
             -MD -MP -I./include 
-LDFLAGS  = #-fsanitize=address
+LDFLAGS  = #-fsanitize=address -g3 -fno-omit-frame-pointer
 
 
 all: $(NAME)

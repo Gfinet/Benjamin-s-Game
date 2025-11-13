@@ -3,9 +3,14 @@
 
 # include <iostream>
 # include <string>
+# include "ACase.hpp"
 
 class Player
 {
+
+	private:
+		const std::string _name;
+		ACase 		*_place;
 
 	public:
 
@@ -14,8 +19,6 @@ class Player
 		~Player();
 
 		Player &		operator=( Player const & rhs );
-
-	private:
 
 };
 

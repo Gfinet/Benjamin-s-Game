@@ -1,14 +1,14 @@
-#include "Case.hpp"
+#include "ACase.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Case::Case()
+ACase::ACase()
 {
 }
 
-Case::Case( const Case & src )
+ACase::ACase( const ACase & src )
 {
 }
 
@@ -17,7 +17,7 @@ Case::Case( const Case & src )
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Case::~Case()
+ACase::~ACase()
 {
 }
 
@@ -26,7 +26,7 @@ Case::~Case()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Case &				Case::operator=( Case const & rhs )
+ACase &				ACase::operator=( ACase const & rhs )
 {
 	//if ( this != &rhs )
 	//{
@@ -35,7 +35,7 @@ Case &				Case::operator=( Case const & rhs )
 	return *this;
 }
 
-std::ostream &			operator<<( std::ostream & o, Case const & i )
+std::ostream &			operator<<( std::ostream & o, ACase const & i )
 {
 	//o << "Value = " << i.getValue();
 	return o;

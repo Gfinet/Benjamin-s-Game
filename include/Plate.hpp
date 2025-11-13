@@ -3,9 +3,13 @@
 
 # include <iostream>
 # include <string>
+# include "ACase.hpp"
 
 class Plate
 {
+
+	private:
+		ACase *_cases;
 
 	public:
 
@@ -14,8 +18,6 @@ class Plate
 		~Plate();
 
 		Plate &		operator=( Plate const & rhs );
-
-	private:
 
 };
 
