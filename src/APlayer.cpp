@@ -1,14 +1,14 @@
-#include "Player.hpp"
+#include "APlayer.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Player::Player()
+APlayer::APlayer()
 {
 }
 
-Player::Player( const Player & src )
+APlayer::APlayer( const APlayer & src )
 {
 	*this = src;
 }
@@ -18,7 +18,7 @@ Player::Player( const Player & src )
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Player::~Player()
+APlayer::~APlayer()
 {
 }
 
@@ -27,7 +27,7 @@ Player::~Player()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Player &				Player::operator=( Player const & rhs )
+APlayer &				APlayer::operator=( APlayer const & rhs )
 {
 	if ( this != &rhs )
 	{
@@ -40,7 +40,7 @@ Player &				Player::operator=( Player const & rhs )
 	return *this;
 }
 
-std::ostream &			operator<<( std::ostream & o, Player const & i )
+std::ostream &			operator<<( std::ostream & o, APlayer const & i )
 {
 	(void)i;
 	//o << "Value = " << i.getValue();
@@ -57,53 +57,53 @@ std::ostream &			operator<<( std::ostream & o, Player const & i )
 ** --------------------------------- ACCESSOR ---------------------------------
 */
 
-ACase 		*Player::getCase() const
+ACase 		*APlayer::getCase() const
 {
 	return _case;
 }
 
-size_t 		Player::getNbDrink() const
+size_t 		APlayer::getNbDrink() const
 {
 	return _nbDrink;
 }
 
-size_t 		Player::getPlace() const
+size_t 		APlayer::getPlace() const
 {	
 	return _place;
 }
 
-std::string Player::getName() const
+std::string APlayer::getName() const
 {
 	return _name;
 }
 
-std::string Player::getColor() const
+std::string APlayer::getColor() const
 {
 	return _color;
 }
 
 
-void Player::setCase(ACase* Case)
+void APlayer::setCase(ACase* Case)
 {
 	_case = Case;
 }
 
-void Player::setNbDrink(size_t nb)
+void APlayer::setNbDrink(size_t nb)
 {
 	_nbDrink = nb;
 }
 
-void Player::setPlace(size_t pl)
+void APlayer::setPlace(size_t pl)
 {
 	_place = pl;
 }
 
-void Player::setName(std::string nam)
+void APlayer::setName(std::string nam)
 {
 	_name = nam;
 }
 
-void Player::setColor(std::string col)
+void APlayer::setColor(std::string col)
 {
 	_color = col;
 }

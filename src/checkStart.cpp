@@ -26,15 +26,20 @@ bool isValid(char *x)
 int getPlayers()
 {
 	int nbPlayer = 0;
-	char chPlay[4] = "\0";
+	char chPlay[64] = "\0";
 
-	std::cout << "yo\n";
-	while (!isValid(chPlay))
+	while (nbPlayer < 2 || nbPlayer > MAX_PLAYER)
 	{
-		std::cout << "Combien de joueurs serez-vous?" << std::endl;
-		std::cin >> chPlay;
+		chPlay[0] = '\0';
+		while (!isValid(chPlay))
+		{
+			std::cout << "How much player?" << std::endl;
+			std::cin >> chPlay;
+		}
+		nbPlayer = atoi(chPlay);
+		if (nbPlayer < 2 || nbPlayer > MAX_PLAYER)
+			std::cout << "Please enter a number between 2 and 100 (included)" << std::endl;
 	}
-	nbPlayer = atoi(chPlay);
 	return nbPlayer;
 }
 

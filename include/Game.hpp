@@ -5,6 +5,7 @@
 # include <string>
 # include "Player.hpp"
 # include "Plate.hpp"
+# include "checkStart.hpp"
 
 class Game
 {
@@ -13,6 +14,7 @@ class Game
 		size_t	_nbPlayer;
 		Plate 	_plate;
 
+		void setPlayer();
 
 	public:
 
@@ -22,6 +24,9 @@ class Game
 
 		Game &		operator=( Game const & rhs );
 
+		Player& 	getPlayer(size_t) const;
+		Player*		getPlayers() const;
+		size_t		getNbPlayer() const;
 };
 
 std::ostream &			operator<<( std::ostream & o, Game const & i );

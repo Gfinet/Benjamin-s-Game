@@ -10,6 +10,7 @@ Plate::Plate()
 
 Plate::Plate( const Plate & src )
 {
+	*this = src;
 }
 
 
@@ -28,15 +29,17 @@ Plate::~Plate()
 
 Plate &				Plate::operator=( Plate const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	if ( this != &rhs )
+	{
+		this->_cases = rhs._cases;
+		this->_display = rhs._display;
+	}
 	return *this;
 }
 
 std::ostream &			operator<<( std::ostream & o, Plate const & i )
 {
+	(void)i;
 	//o << "Value = " << i.getValue();
 	return o;
 }

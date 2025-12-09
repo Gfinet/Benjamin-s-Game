@@ -9,7 +9,8 @@ class Plate
 {
 
 	private:
-		ACase *_cases;
+		ACase 	*_cases;
+		char	**_display;
 
 	public:
 

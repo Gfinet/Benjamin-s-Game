@@ -1,11 +1,11 @@
-#ifndef PLAYER_HPP
-# define PLAYER_HPP
+#ifndef APlayer_HPP
+# define APlayer_HPP
 
 # include <iostream>
 # include <string>
 # include "ACase.hpp"
 
-class Player
+class APlayer
 {
 
 	private:
@@ -18,11 +18,11 @@ class Player
 
 	public:
 
-		Player();
-		Player( Player const & src );
-		~Player();
+		APlayer();
+		APlayer( APlayer const & src );
+		~APlayer();
 
-		Player &		operator=( Player const & rhs );
+		APlayer &		operator=( APlayer const & rhs );
 
 		ACase 		*getCase() const;
 		size_t 		getNbDrink() const;
@@ -38,6 +38,6 @@ class Player
 
 };
 
-std::ostream &			operator<<( std::ostream & o, Player const & i );
+std::ostream &			operator<<( std::ostream & o, APlayer const & i );
 
-#endif /* ********************************************************** PLAYER_H */
+#endif /* ********************************************************** APlayer_H */
