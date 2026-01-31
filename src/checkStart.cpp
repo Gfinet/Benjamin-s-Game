@@ -29,7 +29,7 @@ int getPlayers()
 	char chPlay[64] = "\0";
 
 	while (nbPlayer < 2 || nbPlayer > MAX_PLAYER)
-	{
+	{ // bonjour
 		chPlay[0] = '\0';
 		while (!isValid(chPlay))
 		{
